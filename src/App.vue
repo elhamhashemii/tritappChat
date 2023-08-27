@@ -1,18 +1,16 @@
 <template>
-  <div class="text-3xl text-center">
-    TritAppChat
-    <Avatar :img="avatar3" size="sm" />
-    <AppBtn icon="icon" color="primary" />
-    <Chip color="danger" text="1234" />
-    <TextField placeholder="Type a message ..." />
+  <div class="flex items-start justify-between">
+    <div class="basis-3/12">
+      <ChatList />
+    </div>
+    <div class="basis-9/12 border border-l-gray-200">
+      <CmBody />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import Avatar from '@/components/dls/Avatar.vue';
-import AppBtn from '@/components/dls/Btn.vue';
-import Chip from '@/components/dls/Chip.vue';
-import TextField from '@/components/dls/TextField.vue';
+import ChatList from './components/chat/ChatList.vue';
+import CmBody from './components/chat/message/CmBody.vue';
 
-const avatar3 = 'src/assets/img/avatar-2.png'
 </script>

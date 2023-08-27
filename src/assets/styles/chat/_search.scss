@@ -1,0 +1,12 @@
+.search {
+    @apply text-sm border rounded-lg p-3 flex items-center justify-between ;
+    &__input {
+        @apply basis-11/12 flex items-center justify-start gap-x-3 ;
+        input {
+            @apply w-full outline-none placeholder-gray-500 ;
+        }
+    }
+    &__filter {
+        @apply basis-1/12 cursor-pointer ;
+    }
+}

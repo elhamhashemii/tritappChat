@@ -1,0 +1,18 @@
+.message {
+    @apply text-sm w-full flex items-end gap-x-2 py-2 ;
+    &__others {
+        @apply px-2 py-1 w-fit bg-gray-200 text-black rounded-t-lg rounded-br-lg ;
+    }
+    &__mine {
+        @apply px-2 py-1 w-fit bg-primary text-white rounded-t-lg rounded-bl-lg ;
+    }
+    &_title {
+        @apply text-secondary font-semibold text-xs flex items-start justify-between gap-x-5 ;
+    }
+    &_time {
+        @apply text-xs text-gray-400  ;
+    }
+    &_content {
+        @apply py-1 max-w-md text-end text-xs ;
+    }
+}

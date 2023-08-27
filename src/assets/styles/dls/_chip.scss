@@ -7,13 +7,13 @@
 }
 
 .outlined-primary {
-    @apply px-4 border border-primary text-primary ;
+    @apply px-2 py-0.5 border border-primary text-primary ;
 }
 
 .outlined-danger {
-    @apply px-4 border border-danger text-danger ;
+    @apply px-2 py-0.5 border border-danger text-danger ;
 }
 
 .app-chip {
-    @apply rounded w-fit text-sm ;
+    @apply rounded w-fit text-xs ;
 }
