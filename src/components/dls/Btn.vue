@@ -1,7 +1,7 @@
 <template>
     <div class="app-btn" :class="`btn_${color}`">
         <div v-if="icon" class="flex items-center justify-center">
-            <img :src="icon" :alt="icon" />
+            <slot />
         </div>
         <div v-else>{{ text }}</div>
     </div>
