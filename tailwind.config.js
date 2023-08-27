@@ -18,7 +18,8 @@ export default {
         100: '#f2f2f2',
         200: '#e2e2e2',
         300: '#bbbbbb',
-        400: '#afafaf'
+        400: '#afafaf',
+        500: '#868686'
       }
     }
   },
