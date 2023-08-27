@@ -1,0 +1,6 @@
+.textfield {
+    @apply border border-gray-200 rounded w-full text-sm ;
+    input {
+        @apply w-full bg-white px-3 py-2  outline-none rounded-md;
+    }
+}

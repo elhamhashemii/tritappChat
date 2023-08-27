@@ -1,0 +1,19 @@
+.btn_white {
+    @apply border border-gray-200 bg-white text-gray-200 ;
+}
+
+.btn_primary {
+    @apply border border-primary text-primary ;
+}
+
+.btn_danger {
+    @apply border border-danger text-danger ;
+}
+
+.app-btn {
+    @apply cursor-pointer w-fit p-2 rounded-md ;
+    img {
+        @apply w-6 h-6 ;
+    }
+
+}

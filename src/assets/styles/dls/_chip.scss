@@ -1,0 +1,19 @@
+.filled-primary {
+    @apply px-1 bg-primary text-white ;
+}
+
+.filled-danger {
+    @apply px-1 bg-danger text-white ;
+}
+
+.outlined-primary {
+    @apply px-4 border border-primary text-primary ;
+}
+
+.outlined-danger {
+    @apply px-4 border border-danger text-danger ;
+}
+
+.app-chip {
+    @apply rounded w-fit text-sm ;
+}
