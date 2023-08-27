@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "url": "^0.11.1",
+    "vite-svg-loader": "^4.0.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {

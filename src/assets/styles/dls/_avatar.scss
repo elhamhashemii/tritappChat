@@ -1,0 +1,16 @@
+.sm {
+    @apply w-12 h-12 ;
+}
+.md {
+    @apply w-16 h-16 ;
+}
+.lg {
+    @apply w-20 h-20 ;
+}
+
+.avatar {
+    @apply rounded-md bg-gray-100 cursor-pointer ;
+    img {
+        @apply w-full h-full rounded-md ;
+    }
+}
