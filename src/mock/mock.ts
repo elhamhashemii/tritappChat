@@ -11,7 +11,7 @@ function mockApi(api) {
     mock.onGet('/chats').reply(200, { ...data })
 
     axios.get("/chats").then((res) => {
-        chats.value = res
+        chats.value = res.data.chats
     })
   }
 

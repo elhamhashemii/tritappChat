@@ -4,9 +4,8 @@
             <CmHeader />
         </div>
         <div class="flex flex-col px-3">
-            {{ chats }}
             <div v-for="message in chats" :key="message.sender" :class="message?.isMe ? 'self-end' : 'self-start'">
-                {{ message.chats }}
+                {{ message.messages }}
                 <ChatMessage :message="message" />
             </div>
         </div>
