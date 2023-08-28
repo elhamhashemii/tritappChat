@@ -27,6 +27,6 @@ interface IProps {
     messages: messageItem[]
 }
 const props = defineProps<IProps>()
-const message = computed(() => props.messages)
+const messages = computed(() => props.messages)
 
 </script>
