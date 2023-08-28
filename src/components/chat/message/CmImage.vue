@@ -15,10 +15,10 @@ import { computed, ref } from 'vue';
 import { ArrowDownIcon } from '@heroicons/vue/24/outline'
 
 interface IProps {
-    img: string;
+    content: string;
 }
 const props = defineProps<IProps>()
-const img = computed(() => props.img)
+const img = computed(() => props.content)
 const blurredImg = ref(true)
 function removeBlur() {
     blurredImg.value = false

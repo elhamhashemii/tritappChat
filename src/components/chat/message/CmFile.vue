@@ -12,8 +12,8 @@ import { computed } from 'vue';
 import { DocumentIcon } from '@heroicons/vue/24/solid'
 
 interface IProps {
-    file: string;
+    content: string;
 }
 const props = defineProps<IProps>()
-const fileName = computed(() => props.file)
+const fileName = computed(() => props.content)
 </script>
