@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.18",
+    "axios": "^1.5.0",
     "url": "^0.11.1",
     "vite-svg-loader": "^4.0.0",
     "vue": "^3.3.4"
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.15",
+    "axios-mock-adapter": "^1.21.5",
     "postcss": "^8.4.28",
     "sass": "^1.66.1",
     "tailwindcss": "^3.3.3",
