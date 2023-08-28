@@ -19,10 +19,14 @@
 import ChatMessage from '@/components/chat/message/ChatMessage.vue';
 import CmHeader from './CmHeader.vue';
 import CmInput from './CmInput.vue';
-import mockApi from "@/mock/mock"
+import messageItem from "@/type/message"
 import { computed } from 'vue';
 
-const { chats } = mockApi
-const messages = computed(() => chats.value[1]?.messages)
+// It should have a messages props
+interface IProps {
+    messages: messageItem[]
+}
+const props = defineProps<IProps>()
+const message = computed(() => props.messages)
 
 </script>

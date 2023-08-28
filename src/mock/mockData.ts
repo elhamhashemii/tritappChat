@@ -4,7 +4,7 @@ const data = {
             chat: {
                 id: 1,
                 name: 'New User',
-                avatarSrc: 'src/assets/img/avatar-1.jpg'
+                avatarSrc: 'src/assets/img/avatar-5.jpg'
             },
             recent: {
                 user: 'name',
@@ -60,7 +60,7 @@ const data = {
             chat: {
                 id: 1,
                 name: 'New User',
-                avatarSrc: 'src/assets/img/avatar-1.jpg'
+                avatarSrc: 'src/assets/img/avatar-5.jpg'
             },
             recent: {
                 user: 'name',
@@ -116,7 +116,7 @@ const data = {
             chat: {
                 id: 1,
                 name: 'New User',
-                avatarSrc: 'src/assets/img/avatar-1.jpg'
+                avatarSrc: 'src/assets/img/avatar-5.jpg'
             },
             recent: {
                 user: 'name',
@@ -172,7 +172,7 @@ const data = {
             chat: {
                 id: 1,
                 name: 'New User',
-                avatarSrc: 'src/assets/img/avatar-1.jpg'
+                avatarSrc: 'src/assets/img/avatar-5.jpg'
             },
             recent: {
                 user: 'name',

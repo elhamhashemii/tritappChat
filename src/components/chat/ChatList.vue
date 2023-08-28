@@ -12,7 +12,7 @@
 
         </div>
         <div class="list-items">
-            <ChatListItem v-for="chat in chats" :key="chat" class="border p-3" :title="chat?.chat?.name"
+            <ChatListItem v-for="chat in items" :key="chat" class="border p-3" :title="chat?.chat?.name"
                 :userName="chat?.recent?.user" :userMsg="chat?.recent.message" :userAvatar="chat?.chat?.avatarSrc">
             </ChatListItem>
         </div>
@@ -24,9 +24,18 @@ import CmSearch from '@/components/chat/message/CmSearch.vue';
 import ChatListItem from './ChatListItem.vue';
 import Btn from "@/components/dls/btn.vue"
 import { FolderPlusIcon } from '@heroicons/vue/24/outline'
-import mockApi from "@/mock/mock"
+import messageItem from "@/type/message"
+import { computed } from 'vue';
 
-const { chats } = mockApi
-// const messages = chats.value[1].messages
+interface IProps {
+    items: {
+        chats: { id: number; name: string; avatarSrc: string; }
+        recent: { user: string; message: string; }
+        chips: { title: string; color: string; }[]
+        messages: messageItem[]
+    }[]
+}
+const props = defineProps<IProps>()
+const items = computed(() => props.items)
 
 </script>
