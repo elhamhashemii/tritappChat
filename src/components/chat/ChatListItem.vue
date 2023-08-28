@@ -6,13 +6,15 @@
         </div>
         <div class="basis-full">
             <div class="text-sm font-semibold">{{ title }}</div>
-            <div class="text-xs">{{ userName }} : {{ userMsg }} </div>
+            <div class="text-xs">
+                <span class="font-bold">{{ userName }} :</span> <span class="text-gray-500"> {{ userMsg }}</span>
+            </div>
             <div class="flex items-center gap-x-2 mt-1">
                 <Chip v-for="chipItem in chips" :key="chipItem.title" :color="chipItem.color" :text="chipItem.title" />
             </div>
         </div>
-        <div class="basis-2/12 relative">
-            <div class="text-xs text-gray-400">{{ date }}</div>
+        <div class="basis-3/12 relative">
+            <div class="text-xs text-gray-400 text-end">{{ date }}</div>
             <div class="absolute bottom-0 right-0">
                 <ChevronDownIcon class="text-gray-400 w-4" />
             </div>
