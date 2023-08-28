@@ -6,7 +6,7 @@
         <div class="basis-full">
             <div class="text-sm font-semibold">{{ title }}</div>
             <div class="text-xs">
-                <span class="font-bold">{{ userName }} :</span> <span class="text-gray-500"> {{ userMsg }}</span>
+                <div class="font-bold">{{ userName }} :</div> <p class="text-gray-500"> {{ userMsg }}</p>
             </div>
             <div class="flex items-center gap-x-2 mt-1">
                 <Chip v-for="chipItem in chips" :key="chipItem.title" :color="chipItem.color" :text="chipItem.title" />

@@ -1,6 +1,6 @@
 <template>
     <div class="px-3 py-2 bg-gray-100 flex items-center justify-start gap-x-2">
-        <div class="cursor-pointer">
+        <div class="cursor-pointer" @click="BackToList">
             <ChevronLeftIcon class="text-primary w-5" />
         </div>
         <div>
@@ -20,4 +20,8 @@ import { ChevronLeftIcon } from '@heroicons/vue/24/solid'
 import Avatar from '../../dls/Avatar.vue';
 const avatar3 = 'src/assets/img/avatar-2.png';
 
+function BackToList() {
+    window.location.reload()
+    // I know this is not a good code at all, but I just ran out of time and stressed out, and couldn't spend time on it more :(
+}
 </script>

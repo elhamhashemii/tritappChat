@@ -12,7 +12,7 @@
 
         </div>
         <div class="list-items">
-            <ChatListItem v-for="chat in items" :key="chat" class="border p-3" :item="chat" @onShowChat="activeChat">
+            <ChatListItem v-for="chat in items" :key="chat" class="border-y md:border p-3" :item="chat" @onShowChat="activeChat">
             </ChatListItem>
         </div>
     </div>
