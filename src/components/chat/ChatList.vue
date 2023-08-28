@@ -13,7 +13,7 @@
         </div>
         <div class="list-items">
             <ChatListItem v-for="chat in items" :key="chat" class="border p-3" :title="chat?.chat?.name"
-                :userName="chat?.recent?.user" :userMsg="chat?.recent.message" :userAvatar="chat?.chat?.avatarSrc">
+                :userName="chat?.recent?.user" :userMsg="chat?.recent.message" :userAvatar="chat?.chat?.avatarSrc" :chips="chat?.chips" :date="chat?.chat.date">
             </ChatListItem>
         </div>
     </div>
