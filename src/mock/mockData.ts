@@ -29,7 +29,7 @@ const data = {
                     sender: 'Mahdi Hashemi',
                     time: '07:23',
                     contentType: 'img',
-                    content: 'src/assets/img/avatar-1.jpg'
+                    content: 'src/assets/img/avatar-3.png'
                 },
                 {
                     isMe: true,
@@ -85,7 +85,7 @@ const data = {
                     sender: 'Mahdi Hashemi',
                     time: '07:23',
                     contentType: 'img',
-                    content: 'src/assets/img/avatar-1.jpg'
+                    content: 'src/assets/img/avatar-3.png'
                 },
                 {
                     isMe: true,
@@ -141,7 +141,7 @@ const data = {
                     sender: 'Mahdi Hashemi',
                     time: '07:23',
                     contentType: 'img',
-                    content: 'src/assets/img/avatar-1.jpg'
+                    content: 'src/assets/img/avatar-3.png'
                 },
                 {
                     isMe: true,
@@ -197,7 +197,7 @@ const data = {
                     sender: 'Mahdi Hashemi',
                     time: '07:23',
                     contentType: 'img',
-                    content: 'src/assets/img/avatar-1.jpg'
+                    content: 'src/assets/img/avatar-3.png'
                 },
                 {
                     isMe: true,

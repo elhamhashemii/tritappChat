@@ -4,8 +4,8 @@
             <CmHeader />
         </div>
         <div class="flex flex-col px-3">
-            <div v-for="message in chats" :key="message.sender" :class="message?.isMe ? 'self-end' : 'self-start'">
-                {{ message.messages }}
+            <div v-for="message in messages" :key="message.messages?.sender"
+                :class="message?.isMe ? 'self-end' : 'self-start'">
                 <ChatMessage :message="message" />
             </div>
         </div>
@@ -20,7 +20,9 @@ import ChatMessage from '@/components/chat/message/ChatMessage.vue';
 import CmHeader from './CmHeader.vue';
 import CmInput from './CmInput.vue';
 import mockApi from "@/mock/mock"
+import { computed } from 'vue';
 
 const { chats } = mockApi
+const messages = computed(() => chats.value[1]?.messages)
 
 </script>

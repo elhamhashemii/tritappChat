@@ -12,7 +12,9 @@
 
         </div>
         <div class="list-items">
-            <ChatListItem v-for="i in 9" :key="i" class="border p-3">chatListItem</ChatListItem>
+            <ChatListItem v-for="chat in chats" :key="chat" class="border p-3" :title="chat?.chat?.name"
+                :userName="chat?.recent?.user" :userMsg="chat?.recent.message" :userAvatar="chat?.chat?.avatarSrc">
+            </ChatListItem>
         </div>
     </div>
 </template>
@@ -22,5 +24,9 @@ import CmSearch from '@/components/chat/message/CmSearch.vue';
 import ChatListItem from './ChatListItem.vue';
 import Btn from "@/components/dls/btn.vue"
 import { FolderPlusIcon } from '@heroicons/vue/24/outline'
+import mockApi from "@/mock/mock"
+
+const { chats } = mockApi
+// const messages = chats.value[1].messages
 
 </script>
