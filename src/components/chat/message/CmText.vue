@@ -6,8 +6,8 @@
 import { computed } from 'vue';
 
 interface IProps {
-    message: string;
+    content: string;
 }
 const props = defineProps<IProps>()
-const message = computed(() => props.message)
+const message = computed(() => props.content)
 </script>

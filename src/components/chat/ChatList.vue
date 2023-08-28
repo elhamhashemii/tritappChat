@@ -12,8 +12,7 @@
 
         </div>
         <div class="list-items">
-            <ChatListItem v-for="chat in items" :key="chat" class="border p-3" :title="chat?.chat?.name"
-                :userName="chat?.recent?.user" :userMsg="chat?.recent.message" :userAvatar="chat?.chat?.avatarSrc" :chips="chat?.chips" :date="chat?.chat.date">
+            <ChatListItem v-for="chat in items" :key="chat" class="border p-3" :item="chat" @onShowChat="activeChat">
             </ChatListItem>
         </div>
     </div>
@@ -24,18 +23,16 @@ import CmSearch from '@/components/chat/message/CmSearch.vue';
 import ChatListItem from './ChatListItem.vue';
 import Btn from "@/components/dls/btn.vue"
 import { FolderPlusIcon } from '@heroicons/vue/24/outline'
-import messageItem from "@/type/message"
 import { computed } from 'vue';
+import { chatListItem } from "@/types/chat"
 
 interface IProps {
-    items: {
-        chats: { id: number; name: string; avatarSrc: string; }
-        recent: { user: string; message: string; }
-        chips: { title: string; color: string; }[]
-        messages: messageItem[]
-    }[]
+    items: chatListItem[]
 }
 const props = defineProps<IProps>()
 const items = computed(() => props.items)
-
+const emits = defineEmits(['onActivate'])
+function activeChat(id: number) {
+    emits('onActivate', id)
+}
 </script>

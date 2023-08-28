@@ -2,7 +2,7 @@ const data = {
     chats: [
         {
             chat: {
-                id: 1,
+                id: 0,
                 name: 'New User',
                 avatarSrc: 'src/assets/img/avatar-5.jpg',
                 date: 'July 7'
@@ -59,7 +59,7 @@ const data = {
         },
         {
             chat: {
-                id: 2,
+                id: 1,
                 name: 'Salam',
                 avatarSrc: 'src/assets/img/avatar-2.png',
                 date: 'July 2'
@@ -117,7 +117,7 @@ const data = {
         },
         {
             chat: {
-                id: 3,
+                id: 2,
                 name: 'کافه',
                 avatarSrc: 'src/assets/img/avatar-4.jpg',
                 date: 'July 1'
@@ -175,7 +175,7 @@ const data = {
         },
         {
             chat: {
-                id: 4,
+                id: 3,
                 name: 'Code Bot',
                 avatarSrc: 'src/assets/img/avatar-3.png',
                 date: 'June 6'
@@ -233,7 +233,7 @@ const data = {
         },
         {
             chat: {
-                id: 5,
+                id: 4,
                 name: 'TritApp',
                 avatarSrc: 'src/assets/img/no-avatar.png',
                 date: 'may 2'

@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-start justify-between">
     <div class="basis-3/12">
-      <ChatList :items="chats" />
+      <ChatList @onActivate="activateChat" :items="chats" />
     </div>
     <div class="basis-9/12 border border-l-gray-200">
       <CmBody :messages="messages" />
@@ -13,8 +13,12 @@
 import ChatList from './components/chat/ChatList.vue';
 import CmBody from './components/chat/message/CmBody.vue';
 import mockApi from "@/mock/mock"
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 const { chats } = mockApi
-const messages = computed(() => chats.value[1]?.messages)
+const activeChat = ref(1)
+function activateChat(id: number) {
+  activeChat.value = id
+}
+const messages = computed(() => chats.value[activeChat.value]?.messages)
 </script>

@@ -19,9 +19,9 @@
                 </div>
             </div>
             <div class="message_content">
-                <CmText v-if="textMessage" :message="content" />
-                <CmImage v-if="imgMessage" :img="content" />
-                <CmFile v-if="fileMessage" :file="content" />
+                <CmText v-if="contentType === 'text'" :content="content" />
+                <CmFile v-if="contentType === 'file'" :content="content" />
+                <CmImage v-if="contentType === 'img'" :content="content" />
             </div>
             <div class="message_time" :class="isMe ? 'text-end' : 'text-start'">{{ time }}</div>
         </div>
@@ -32,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import Avatar from '@/components/dls/Avatar.vue';
 import { ChevronDownIcon } from '@heroicons/vue/24/outline'
 import CmText from '@/components/chat/message/CmText.vue';
@@ -52,24 +52,6 @@ const content = computed(() => props.message?.content)
 const time = computed(() => props.message?.time)
 const isForwarderd = computed(() => props.message?.isForwarderd || false)
 const forwardedFrom = computed(() => props.message?.forwardedFrom)
-
-const textMessage = ref(false)
-const fileMessage = ref(false)
-const imgMessage = ref(false)
-
-switch (contentType.value) {
-    case 'text':
-        textMessage.value = true
-        break;
-    case 'file':
-        fileMessage.value = true
-        break; case 'img':
-        imgMessage.value = true
-        break;
-    default:
-        textMessage.value = true
-        break;
-}
 
 const avatar3 = 'src/assets/img/avatar-2.png'
 
