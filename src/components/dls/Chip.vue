@@ -17,7 +17,7 @@ const text = computed(() => props.text)
 const color = computed(() => props.color)
 const filled = computed(() => props.filled)
 
-const classes = computed(() => filled.value ? `filled-${color.value}` : `outlined-${color.value}`)
+const classes = computed(() => (['chip', filled.value ? `chip_filled-${color.value}` : `chip_outlined-${color.value}`]))
 
 </script>
 

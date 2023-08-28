@@ -1,7 +1,7 @@
 <template>
     <div class="message">
         <div v-if="!isMe">
-            <Avatar :img="avatar3" />
+            <Avatar :src="avatar3" />
         </div>
         <div :class="isMe ? 'message__mine' : 'message__others'">
             <div class="message_title">
@@ -26,7 +26,7 @@
             <div class="message_time" :class="isMe ? 'text-end' : 'text-start'">{{ time }}</div>
         </div>
         <div v-if="isMe">
-            <Avatar :img="avatar3" />
+            <Avatar :src="avatar3" />
         </div>
     </div>
 </template>

@@ -4,7 +4,7 @@
             <ChevronLeftIcon class="text-primary w-5" />
         </div>
         <div>
-            <Avatar :img="avatar3" size="md" />
+            <Avatar :src="avatar3" size="md" />
         </div>
         <div class="text-start">
             <div class="text-sm mb-1">

@@ -1,10 +1,10 @@
 <template>
-    <div class="app-btn" :class="`btn_${color}`">
-        <div v-if="icon" class="flex items-center justify-center">
+    <button class="btn" :class="`btn_${color}`">
+        <span v-if="icon" class="flex items-center justify-center">
             <slot />
-        </div>
-        <div v-else>{{ text }}</div>
-    </div>
+        </span>
+        <span v-else>{{ text }}</span>
+    </button>
 </template>
 
 <script setup lang="ts">

@@ -2,7 +2,7 @@
     <div class="flex items-stretch gap-x-3 justify-start cursor-pointer">
         <slot></slot>
         <div>
-            <Avatar :img="userAvatar" size="lg" />
+            <Avatar :src="userAvatar" size="lg" />
         </div>
         <div class="basis-full">
             <div class="text-sm font-semibold">{{ title }}</div>

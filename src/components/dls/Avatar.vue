@@ -1,6 +1,6 @@
 <template>
-    <div class="avatar" :class="size">
-       <img :src="img" alt="Avatar_img" />
+    <div class="avatar" :class="`avatar_${size}`">
+        <img v-if="!!img" :src="img" />
     </div>
 </template>
 
@@ -8,11 +8,11 @@
 import { computed } from 'vue';
 
 interface IProps {
-    img?: string;
+    src?: string;
     size?: 'sm' | 'md' | 'lg'
 }
 const props = defineProps<IProps>()
-const img = computed(() => props.img || 'src/assets/img/no-avatar.png')
+const img = computed(() => props.src || 'src/assets/img/no-avatar.png')
 const size = computed(() => props.size || 'sm')
 
 </script>
