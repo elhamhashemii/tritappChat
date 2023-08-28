@@ -38,17 +38,10 @@ import { ChevronDownIcon } from '@heroicons/vue/24/outline'
 import CmText from '@/components/chat/message/CmText.vue';
 import CmImage from '@/components/chat/message/CmImage.vue';
 import CmFile from '@/components/chat/message/CmFile.vue';
+import messageItem from "@/type/message"
 
 interface IProps {
-    message: {
-        isMe?: boolean;
-        sender: string;
-        contentType: 'text' | 'img' | 'file';
-        content: string;
-        time: string;
-        isForwarderd?: boolean;
-        forwardedFrom?: string;
-    }
+    message: messageItem
 }
 
 const props = defineProps<IProps>()

@@ -1,18 +1,20 @@
 <template>
     <div class="flex items-stretch gap-x-3 justify-start cursor-pointer">
+        <slot></slot>
         <div>
-            <Avatar :img="avatar3" size="lg" />
+            <Avatar :img="userAvatar" size="lg" />
         </div>
         <div class="basis-full">
-            <div class="text-sm font-semibold">title</div>
-            <div class="text-xs">lastPeople : lastMessage ... </div>
+            <div class="text-sm font-semibold">{{ title }}</div>
+            <div class="text-xs">
+                <span class="font-bold">{{ userName }} :</span> <span class="text-gray-500"> {{ userMsg }}</span>
+            </div>
             <div class="flex items-center gap-x-2 mt-1">
-                <Chip color="primary" text="Questions" />
-                <Chip color="danger" text="Questions" />
+                <Chip v-for="chipItem in chips" :key="chipItem.title" :color="chipItem.color" :text="chipItem.title" />
             </div>
         </div>
-        <div class="basis-2/12 relative">
-            <div class="text-xs text-gray-400">July 2</div>
+        <div class="basis-3/12 relative">
+            <div class="text-xs text-gray-400 text-end">{{ date }}</div>
             <div class="absolute bottom-0 right-0">
                 <ChevronDownIcon class="text-gray-400 w-4" />
             </div>
@@ -24,7 +26,23 @@
 import { ChevronDownIcon } from '@heroicons/vue/24/outline'
 import Avatar from '../dls/Avatar.vue';
 import Chip from '../dls/Chip.vue';
-const avatar3 = 'src/assets/img/avatar-2.png'
+import { computed } from 'vue';
 
+interface IProps {
+    title: string;
+    userName: string;
+    userMsg: string;
+    userAvatar: string;
+    chips: { color: string; title: string; }[];
+    date: string;
+}
+
+const props = defineProps<IProps>()
+const title = computed(() => props.title)
+const userName = computed(() => props.userName)
+const userMsg = computed(() => props.userMsg)
+const userAvatar = computed(() => props.userAvatar)
+const chips = computed(() => props.chips)
+const date = computed(() => props.date)
 
 </script>

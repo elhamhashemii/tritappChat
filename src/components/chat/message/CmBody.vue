@@ -4,7 +4,8 @@
             <CmHeader />
         </div>
         <div class="flex flex-col px-3">
-            <div v-for="message in messages" :key="message.sender" :class="message?.isMe ? 'self-end' : 'self-start'">
+            <div v-for="message in messages" :key="message.messages?.sender"
+                :class="message?.isMe ? 'self-end' : 'self-start'">
                 <ChatMessage :message="message" />
             </div>
         </div>
@@ -18,46 +19,14 @@
 import ChatMessage from '@/components/chat/message/ChatMessage.vue';
 import CmHeader from './CmHeader.vue';
 import CmInput from './CmInput.vue';
+import messageItem from "@/type/message"
+import { computed } from 'vue';
 
-const messages = [
-    {
-        isMe: false,
-        sender: 'Mahdi Hashemi',
-        time: '07:23',
-        contentType: 'file',
-        content: 'اسامی شرکت کنندگان دوره مقدماتی.xlsx',
-        isForwarderd: true,
-        forwardedFrom: 'Elahe Mohammadi Nia'
-    },
-    {
-        isMe: false,
-        sender: 'Mahdi Hashemi',
-        time: '07:23',
-        contentType: 'img',
-        content: 'src/assets/img/avatar-1.jpg'
-    },
-    {
-        isMe: true,
-        sender: 'Elham Hashemi',
-        time: '07:23',
-        contentType: 'text',
-        content: 'لورم مجله در ستون و سطرآنچنان که لازم است'
+// It should have a messages props
+interface IProps {
+    messages: messageItem[]
+}
+const props = defineProps<IProps>()
+const message = computed(() => props.messages)
 
-    },
-    {
-        isMe: false,
-        sender: 'Mahdi Hashemi',
-        time: '07:23',
-        contentType: 'text',
-        content: 'لورم مجله در ستون و سطرآنچنان که لازم است'
-
-    }, {
-        isMe: false,
-        sender: 'Mahdi Hashemi',
-        time: '07:23',
-        contentType: 'text',
-        content: 'لورم مجله در ستون و سطرآنچنان که لازم است'
-
-    }
-]
 </script>
